@@ -15,7 +15,10 @@
         cheerpjCreateDisplay(800, 600);
         
         // Execute the main method inside your compiled JAR
-        await cheerpjRunJar("/app/HelloWorld.jar");
+        // Dynamically gets the repository's subfolder path
+        const currentPath = window.location.pathname;
+        const jarPath = `/app${currentPath}${currentPath.endsWith('/') ? '' : '/'}HelloWorld.jar`;
+        await cheerpjRunJar(jarPath);
     </script>
 </body>
 </html>
