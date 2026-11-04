@@ -18,6 +18,7 @@
         // Dynamically gets the repository's subfolder path
         const currentPath = window.location.pathname;
         const jarPath = `/app${currentPath}${currentPath.endsWith('/') ? '' : '/'}HelloWorld.jar`;
+        console.log(jarPath);
         await cheerpjRunJar(jarPath);
     </script>
 </body>
