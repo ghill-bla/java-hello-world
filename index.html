@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Java App via CheerpJ</title>
+    <!-- Load the latest CheerpJ 5.0 runtime -->
+    <script src="https://cjrtnc.leaningtech.com/5.0/loader.js"></script>
+</head>
+<body>
+    <script type="module">
+        // Initialize the CheerpJ OpenJDK environment
+        await cheerpjInit();
+        
+        // Create a canvas display area for the Swing/AWT window
+        cheerpjCreateDisplay(800, 600);
+        
+        // Execute the main method inside your compiled JAR
+        await cheerpjRunJar("/app/HelloWorld.jar");
+    </script>
+</body>
+</html>
